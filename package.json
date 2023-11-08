@@ -5,7 +5,8 @@
   "scripts": {
     "test": "cypress open",
     "test_cambio_contraseña": "cypress run --spec cypress/e2e/prueba_cambiar_contraseña.cy.js --browser chrome",
-    "test_celular": "cypress run cypress/e2e/prueba_celular.cy.js --browser chrome"
+    "test_celular": "cypress run cypress/e2e/prueba_celular.cy.js --browser chrome",
+    "test_crear_usuario": "cypress run cypress/e2e/crear_usuario.cy.js --browser chrome"
   },
   "author": "simon",
   "license": "ISC",
