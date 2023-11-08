@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "cypress open"
+    "test": "cypress open",
+    "test_cambio_contraseña": "cypress run --spec cypress/e2e/prueba_cambiar_contraseña.cy.js --browser chrome"
   },
   "author": "simon",
   "license": "ISC",
