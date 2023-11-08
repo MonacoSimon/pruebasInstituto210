@@ -1,0 +1,20 @@
+describe("usuario repetido", () =>{
+    it("", () =>{
+        cy.visit("http://127.0.0.1:8000/")
+        cy.get('.icono-nav').click()
+        cy.get('#id_username').type("usuario@admin.com")
+        cy.get('#id_password').type("contraseña")
+        cy.get('.btn').click()
+        cy.get('#dropdownMenuButton1').click()
+        cy.get(':nth-child(2) > .dropdown > .dropdown-menu > :nth-child(2) > .dropdown-item').click()
+        cy.get('#id_dni').type("651983984")
+        cy.get('#id_nombres').type("simo")
+        cy.get('#id_apellidos').type("monac")
+        cy.get('#id_email').type("simon@1234.con")
+        cy.get('.botones-registracion > .btn').click()
+        cy.get(':nth-child(3) > .alert > p').should("be.visible")
+        cy.get(':nth-child(5) > .alert > p').should("be.visible")
+        cy.get(':nth-child(10) > .alert').should("be.visible")
+    })
+    
+})
