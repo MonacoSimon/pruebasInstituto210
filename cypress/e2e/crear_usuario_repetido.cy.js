@@ -1,4 +1,4 @@
-describe("prueba crear usuario", () =>{
+describe("prueba crear usuario repaetido", () =>{
     it("crear usuario nuevo", () =>{
         cy.visit("http://127.0.0.1:8000/")
         cy.get('.icono-nav').click()
@@ -12,6 +12,9 @@ describe("prueba crear usuario", () =>{
         cy.get('#id_apellidos').type("vazques")
         cy.get('#id_email').type("jose@1234.col")
         cy.get('.botones-registracion > .btn').click()
+        cy.get(':nth-child(3) > .alert > p').should("be.visible")
+        cy.get(':nth-child(5) > .alert > p').should("be.visible")
+        cy.get(':nth-child(10) > .alert > p').should("be.visible")
 
     })
 })
