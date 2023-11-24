@@ -1,0 +1,16 @@
+describe("prueba nuevo memu", () =>{
+    it("", () =>{
+        cy.visit("http://127.0.0.1:8000/")
+        cy.get('.icono-nav').click()
+        cy.get('#id_username').type("usuario@admin.com")
+        cy.get('#id_password').type("contraseña")
+        cy.get('.btn').click()
+        cy.get('.botones-inicio').should('be.visible')
+        cy.get('[href="/altaMateria/"]').click()
+        cy.get('#id_nombre_materia').type("ingles")
+        cy.get('#id_carrera').select(1)
+        cy.get('#id_profesor').select(1)
+        cy.get('.botones-edituser > .btn').click()
+        cy.get('a > .btn').click()
+    })
+})
